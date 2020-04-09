@@ -14,27 +14,28 @@ Você pode utilizar qualquer boilerplate/CRA que você preferir, mas tente reali
 
 ## A solução a ser desenvolvida
 
-### A aplicação web deve ser um site para pesquisa de filmes com duas páginas:
+### A aplicação web (frontend)
 
-* **Home:** página inicial da aplicação que contém um campo de pesquisa;
+##### Home 
+- Página inicial da aplicação que contém um campo de pesquisa;
 - A aplicação não deve ter nenhum tipo de controle de acesso
 - O resultado da pesquisa será uma lista de filmes que devem ser exibidos para o usuário nessa mesma página Home
 - Exibir na listagem de filmes apenas a foto, o título, o ano de lançamento, gênero, nota imdb e a descrição dos filmes
 - A lista deve estar ordenada por filmes mais recentes, mas você também deve permitir que o usuário ordene por "mais recentes" ou "maior nota"
+- Pense em estado vazio para os filmes, loading e filmes não encontrados
 
-  _Pense em estado vazio para os filmes, loading e filmes não encontrados_
-
-* **Página do filme:** detalhe do filme;
+##### Página do filme
 - Exibe os detalhes do filme selecionado. Além do que já era exibido na tela Home, exibir também elenco, direção, premiações e língua original.
 - Ao voltar para a página Home, devemos ter a mesma ordenação e a mesma pesquisa anteriores à "Página do filme"
 - Permite que o usuário marque um filme como "Gostei" para ser exibido na listagem com esse símbolo (apesar de não te controle de acesso, pense em alguma forma da aplicação saber quem é o usuário, mas foque em soluções simples e funcionais)
 - O símbolo de "Gostei" só é exibido para o usuário que marcou o filme
-
-  _Pense sobre loading e detalhes não encontrados_
+- Pense sobre loading e detalhes não encontrados
   
-### API
+### API (backend)
 Você deverá desenvolver uma API que será consultada pela aplicação web para receber os dados necessários para as telas
+
 Fique à vontade na construção dessa API para usar a linguagem que você quiser e construir quantos endpoints achar necessário.
+
 Esse serviço deve se comunicar com a API [OMDb API](http://www.omdbapi.com/) para fornecer os dados para o frontend, você também pode optar por utilizar a API de filmes que preferir.
 
 ## Avaliação
