@@ -44,13 +44,13 @@ A proposta deste desafio é para avaliar seu HTML, CSS, Javascript, construção
 ### Dicas
 
 * Escreva um bom README com informações que auxiliem quem for ler o código (ex: funcionamento da API, como startar o projeto e como buildar);
-* Será ótimo poder executar a aplicação com apenas um comando; =)
+* Seria ótimo poder executar a solução do desafio com apenas um comando; =)
 * Sinta-se a vontade em usar a linguagem de backend que você quiser para a API (escrever em Go seria um bônus);
 * Para o frontend utilize React e qualquer lib que desejar, mas lembre-se que, muitas vezes, "menos é mais";
 * Sinta-se a vontade para definir o layout das páginas web;
 * Fazer perguntas é bom. Não vamos te penalizar por perguntar;
 * A API externa às vezes pode demorar em nos responder, pense em loading e estado vazio da sua aplicação;
-* Estamos procurando por sinais do seu entendimento de alguns conceitos como eventos, promises, ciclos de vida e como você aplica e implementa isto com a linguagem utilizada. 
+* Estamos procurando por sinais do seu entendimento de alguns conceitos como eventos, promises, ciclos de vida e como você aplica e implementa isto com a linguagem utilizada;
 * Testes unitários serão bem valorizados;
 * Uso do git será bem valorizado;
 * Seu código será avaliado por: semântica, estrutura, legibilidade, tamanho, elegância (entre outros fatores);
