@@ -1,62 +1,43 @@
-## Sobre o desafio
+Esse projeto foi gerado com [Create React App](https://github.com/facebook/create-react-app).
 
-Este é um simples teste para o qual você desenvolverá uma aplicação de acordo com os requisitos e orientações neste documento.
+## Scripts disponíves
 
-Você pode utilizar qualquer boilerplate/CRA que você preferir, mas tente realizar de forma simples. É um plus caso você queira efetuar o seu próprio boilerplate para buildar suas aplicações. Você também é livre em utilizar as ferramentas que desejar.
+No diretórrio do projeto execute:
 
-## Como funciona?
+### `npm install`
+Instala as dependências do projeto
 
-1.  Crie um branch com seu nome;
-2.  Resolva o desafio da melhor forma que conseguir;
-3.  Utilize os commits como se estivesse em um projeto colaborativo, pois isso fará parte do processo de avaliação;
-4.  Quando terminar abra um Pull Request para o branch `master` deste repositório, dessa forma que saberemos que você concluiu o desafio e podemos iniciar a revisão do código;
-5.  Entraremos em contato com você para dar um feedback.
+### `npm start`
 
-## A solução a ser desenvolvida
+Executa a aplicação em modo desenvolvimento.<br />
+Abra [http://localhost:3000](http://localhost:3000) para ver no browser.
 
-### A aplicação web (frontend)
+A página recarrega autometicamente quando editar arquivos do projeto.<br />
+Você também pode ver os erros no console.
 
-##### Home 
-- Página inicial da aplicação que contém um campo de pesquisa;
-- A aplicação não deve ter nenhum tipo de controle de acesso
-- O resultado da pesquisa será uma lista de filmes que devem ser exibidos para o usuário nessa mesma página Home
-- Exibir na listagem de filmes apenas a foto, o título, o ano de lançamento, gênero, nota imdb e a descrição dos filmes
-- A lista deve estar ordenada por filmes mais recentes, mas você também deve permitir que o usuário ordene por "mais recentes" ou "maior nota"
-- Pense em estado vazio para os filmes, loading e filmes não encontrados
+### `npm test`
 
-##### Página do filme
-- Exibe os detalhes do filme selecionado. Além do que já era exibido na tela Home, exibir também elenco, direção, premiações e língua original.
-- Ao voltar para a página Home, devemos ter a mesma ordenação e a mesma pesquisa anteriores à "Página do filme"
-- Permite que o usuário marque um filme como "Gostei" para ser exibido na listagem com esse símbolo (apesar de não te controle de acesso, pense em alguma forma da aplicação saber quem é o usuário, mas foque em soluções simples e funcionais)
-- O símbolo de "Gostei" só é exibido para o usuário que marcou o filme
-- Pense sobre loading e detalhes não encontrados
-  
-### API (backend)
-Você deverá desenvolver uma API que será consultada pela aplicação web para receber os dados necessários para as telas
+Executa no modo de teste.<br />
+Veja [running tests](https://facebook.github.io/create-react-app/docs/running-tests) para mais informações.
 
-Fique à vontade na construção dessa API para usar a linguagem que você quiser e construir quantos endpoints achar necessário.
+### `npm run build`
 
-Esse serviço deve se comunicar com a API [OMDb API](http://www.omdbapi.com/) para fornecer os dados para o frontend, você também pode optar por utilizar a API de filmes que preferir.
+Faz o build da aplicação para produção na pasta `build`.<br />
 
-## Avaliação
-A proposta deste desafio é para avaliar seu HTML, CSS, Javascript, construção da API, boas práticas de programação, uso do GIT, conhecimento da linguagem e lib/framework utilizados, entre outras skills que serão demonstradas ao decorrer do projeto.
+## Backend
 
-### Dicas
+Back-end foi feito em Go. Para subir o serviço é necessário instalar o Go na máquina.
 
-* Escreva um bom README com informações que auxiliem quem for ler o código (ex: funcionamento da API, como startar o projeto e como buildar);
-* Seria ótimo poder executar a solução do desafio com apenas um comando; =)
-* Sinta-se a vontade em usar a linguagem de backend que você quiser para a API (escrever em Go seria um bônus);
-* Para o frontend utilize React e qualquer lib que desejar, mas lembre-se que, muitas vezes, "menos é mais";
-* Sinta-se a vontade para definir o layout das páginas web;
-* Fazer perguntas é bom. Não vamos te penalizar por perguntar;
-* A API externa às vezes pode demorar em nos responder, pense em loading e estado vazio da sua aplicação;
-* Estamos procurando por sinais do seu entendimento de alguns conceitos como eventos, promises, ciclos de vida e como você aplica e implementa isto com a linguagem utilizada;
-* Testes unitários serão bem valorizados;
-* Uso do git será bem valorizado;
-* Seu código será avaliado por: semântica, estrutura, legibilidade, tamanho, elegância (entre outros fatores);
-* Não existe a necessidade de fazer deploy CI/CD da aplicação. Mas se feito, será um bônus.
+Para subir o serviço navegue até a pasta ~/go/src/github.com/davifelipems/restapi
+e execute o comando 
+### `go run main.go`
+O serviço responde na porta 8000
 
-#### Telas:
+## API
 
-Não temos o layout das telas definido, fique à vontade para usar a sua criatividade.
-Uma ideia seria algo assim: [Marvel Prototype](https://marvelapp.com/3cj0i64/screen/52947277)  
+Só existe um endpoint no projeto. De acordo com parâmetro passado o serviço retorna os dados de maneira diferente:
+(s - busca vários registros pelo título)
+(t - um registro pelo título)
+(i - um registro pelo id)
+
+Exemplo: http://localhost:8000/itens?i=tt7908628
